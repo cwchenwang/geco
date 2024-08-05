@@ -1,6 +1,8 @@
 # GECO: Generative Image-to-3D within a SECOnd
 
-### [Project Page](https://cwchenwang.github.io/geco) | [Paper](https://arxiv.org/abs/2405.20327)
+### [Project Page](https://cwchenwang.github.io/geco) | [Paper](https://arxiv.org/abs/2405.20327) | [Code](https://github.com/cwchenwang/geco)
+
+**We have integrated the distillation method in GECO for more advanced teachers (e.g. InstantMesh) to achieve better results. Please stay tuned for the updates of both code and results.**
 
 Abstract: *3D generation has seen remarkable progress in recent years. Existing techniques, such as score distillation methods, produce notable results but require extensive per-scene optimization, impacting time efficiency. Alternatively, reconstruction-based approaches prioritize efficiency but compromise the quality due to their limited handling of uncertainty. We introduce GECO, a novel method for high-quality 3D generative modeling that operates within a second. Our approach addresses the prevalent issues of uncertainty and inefficiency in current methods through a two-stage approach. In the initial stage, we train a single-step multi-view generative model with score distillation. Then, a second-stage distillation is applied to address the challenge of view inconsistency from the multi-view prediction. This two-stage process ensures a balanced approach to 3D generation, optimizing both quality and efficiency. Our comprehensive experiments demonstrate that GECO achieves high-quality image-to-3D generation with an unprecedented level of efficiency.*
 
