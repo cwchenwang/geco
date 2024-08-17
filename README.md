@@ -1,4 +1,4 @@
-# GECO: Generative Image-to-3D within a SECOnd
+# GECO🦎: Generative Image-to-3D within a SECOnd
 
 ### [Project Page](https://cwchenwang.github.io/geco) | [Paper](https://arxiv.org/abs/2405.20327) | [Code](https://github.com/cwchenwang/geco)
 
