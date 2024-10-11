@@ -10,6 +10,7 @@
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script type="module" src="css/model-view.min.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSP2WDTLPY"></script>
   <script>
@@ -118,7 +119,7 @@
       <div class="col-12 text-center">
         <h2>Image to 3D</h2>
         <hr style="margin-top:0px">
-        <video width="60%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
           <source src="video/results.mp4" type="video/mp4">
         </video>
         <p class="text-center">
@@ -136,7 +137,7 @@
       <div class="col-12 text-center">
         <h2>Comparison over Reconstruction-based Methods</h2>
         <hr style="margin-top:0px">
-        <video width="50%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+        <video width="70%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
           <source src="video/comparison.mp4" type="video/mp4">
         </video>
         <p class="text-center">
@@ -148,6 +149,56 @@
 </section>
 <br>
 
+<section>
+  <div class="container col-6">
+    <div class="row text-center">
+      <div class="col-12 text-center">
+        <h2>Interactive Meshes</h2>
+        <hr style="margin-top:0px">
+      </div>
+      <div class="col-3">
+        <model-viewer tone-mapping="neutral" src="meshes/animal_character.glb" style="width: 100%; height: 300px;"
+          orientation="0deg 0deg 180deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer tone-mapping="neutral" src="meshes/dragontoy.glb" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/gso_rabbit.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/kunkun.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/linke.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/000-monkey.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/frog_sweathe.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/teasure_chest.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+    </div>
+  </div>
+</section>
 <br>
 
 <!-- citing -->
