@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GECO: <u>G</u>enerative Image-to-3D within a S<u>ECO</u>nd</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script type="module" src="css/model-view.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSP2WDTLPY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HSP2WDTLPY');
+  </script>
+</head>
+
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>GECO🦎: <u>G</u>enerative Image-to-3D within a S<u>ECO</u>nd
+          </h2>
+          <h4 style="color:#5a6268;">Arxiv 2024</h4>
+          <hr>
+          <h6>
+            <a href="https://cwchenwang.github.io/" target="_blank">Chen Wang</a><sup>1</sup>,
+            <a href="https://jiataogu.me" target="_blank">Jiatao Gu</a><sup>2</sup>,
+            <a href="https://www.xxlong.site/" target="_blank">Xiaoxiao Long</a><sup>3</sup>,
+            <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a><sup>3</sup>,
+            <a href="https://lingjie0206.github.io/" target="_blank">Lingjie Liu</a><sup>1</sup>
+          </h6>
+          <p>
+            <sup>1</sup>University of Pennsylvania &nbsp;&nbsp;
+            <sup>2</sup>Apple&nbsp;&nbsp;&nbsp;&nbsp;
+            <sup>3</sup>The University of Hong Kong &nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+
+          <div class="row justify-content-center">
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2405.20327" role="button"
+                  target="_blank">
+                  <i class="fa fa-file"></i> Paper</a> </p>
+            </div>
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/cwchenwang/geco" role="button"
+                  target="_blank">
+                  <i class="fa fa-github-alt"></i> Code </a> </p>
+            </div>
+            <!-- <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light"
+                  href="https://xxx"
+                  role="button" target="_blank">
+                  <i class="fa fa-database"></i> Model </a> </p>
+            </div>
+            <div class="column">
+              <p class="mb-5"><a class="btn btn-large btn-light"
+                  href="https://xxx" role="button" target="_blank">
+                  <i class="fa fa-desktop"></i> Live Demo </a> </p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- abstract -->
+<section>
+  <div class="container abstract">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3>Abstract</h3>
+        <hr style="margin-top:0px">
+
+        <p class="text-left" style="font-weight: bold;"><strong>
+            TL;DR: We propose a 3D distillation pipeline for feedforward 3D generation that operates in
+            less than one second.
+          </strong>
+        </p>
+
+        <p class="text-left" style="font-weight: bold;"><strong>
+            We integrated the distillation method in GECO for more advanced teachers (e.g. InstantMesh) to achieve
+            better results.
+          </strong>
+        </p>
+
+        <p class="text-left">
+          3D generation has seen remarkable progress in recent years. Existing techniques, such as score distillation
+          methods, produce notable results but require extensive per-scene optimization, impacting time efficiency.
+          Alternatively, reconstruction-based approaches prioritize efficiency but compromise the quality due to their
+          limited handling of uncertainty. We introduce GECO, a novel method for high-quality 3D generative
+          modeling that operates within a second. Our approach addresses the prevalent issues of uncertainty and
+          inefficiency in current methods through a two-stage approach. In the initial stage, we train a single-step
+          multi-view generative model with score distillation. Then, a second-stage distillation is applied to address
+          the challenge of view inconsistency from the multi-view prediction. This two-stage process ensures a balanced
+          approach to 3D generation, optimizing both quality and efficiency. Our comprehensive experiments demonstrate
+          that GECO achieves high-quality image-to-3D generation with an unprecedented level of efficiency.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Image to 3D</h2>
+        <hr style="margin-top:0px">
+        <video width="80%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+          <source src="video/results.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">
+          GECO can achieve great results on image-to-3D generation for in-the-wild data.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Comparison over Reconstruction-based Methods</h2>
+        <hr style="margin-top:0px">
+        <video width="70%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+          <source src="video/comparison.mp4" type="video/mp4">
+        </video>
+        <p class="text-center">
+          GECO can handle the back-view of the object thanks to uncertainty modeling.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<section>
+  <div class="container col-6">
+    <div class="row text-center">
+      <div class="col-12 text-center">
+        <h2>Interactive Meshes</h2>
+        <hr style="margin-top:0px">
+      </div>
+      <div class="col-3">
+        <model-viewer tone-mapping="neutral" src="meshes/animal_character.glb" style="width: 100%; height: 300px;"
+          orientation="0deg 0deg 180deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer tone-mapping="neutral" src="meshes/dragontoy.glb" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/gso_rabbit.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/kunkun.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/linke.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/000-monkey.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/frog_sweathe.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+      <div class="col-3">
+        <model-viewer src="meshes/teasure_chest.glb" tone-mapping="neutral" style="width: 100%; height: 300px;"
+          orientation="-90deg -90deg 0deg" auto-rotate="" shadow-intensity="1" camera-controls="" touch-action="pan-y"
+          ar-status="not-presenting"></model-viewer>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- citing -->
+<div class="container">
+  <div class="row ">
+    <div class="col-12">
+      <h3>Citation</h3>
+      <hr style="margin-top:0px">
+      <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{wang2024geco,
+  title={GECO: Generative Image-to-3D within a Second},
+  author={Wang, Chen and Gu, Jiatao and Long, Xiaoxiao and Liu, Yuan and Liu, Lingjie},
+  journal={arXiv},
+  year={2024}
+}</code>
+</pre>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+<footer class="text-center" style="margin-bottom:10px">
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+</footer>
+
+</body>
+
+</html>
