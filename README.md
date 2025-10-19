@@ -13,6 +13,16 @@ pip install -r requirements.txt
 ```
 
 ## Inference
+
+Download checkpoints:
+```bash
+mkdir ./ckpts && cd ./ckpts
+pip install gdown
+gdown https://drive.google.com/file/d/1K03JZt5tZWfoM4Jf1YL_MsZjQ_dmDnFg/view?usp=drive_link --fuzzy
+gdown https://drive.google.com/file/d/1oJOw6KcAXjlPft4zGxUcgkkFMiplUNe-/view?usp=drive_link --fuzzy
+```
+
+Then run:
 ```bash
 python infer.py big --pipeline zero123plus1step --generate_mv --num_input_views 6 --bg 1.0 --cond_t 0 --init_t 950 --joint --config_path configs/instant-mesh-base.yaml --zero123plus_v 'v11' --fovy 50 --distance 2.5 --resume_pkl ./ckpts/network-snapshot-005000.pkl --resume ./ckpts/model.safetensors --output_dir ./results/test --test_path ./examples/animal_character.png
 ```
