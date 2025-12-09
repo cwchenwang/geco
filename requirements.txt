@@ -25,3 +25,25 @@ mrcfile
 tensorboard
 lpips
 accelerate
+tyro
+opencv-python==4.9.0.80
+rich
+safetensors
+scikit-image
+scikit-learn
+scipy
+tqdm
+transformers
+trimesh
+kiui >= 0.2.3
+xatlas
+roma
+plyfile
+tensorboard
+einops
+gradio==4.8.0
+huggingface-hub==0.24.0
+transforms3d
+open3d
+peft
+git+https://github.com/NVlabs/nvdiffrast/
