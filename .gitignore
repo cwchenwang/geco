@@ -4,3 +4,4 @@ dumps
 *.cache
 **training-runs
 **ckpts
+**DS_Store
