@@ -17,9 +17,15 @@ pip install -r requirements.txt
 Download checkpoints:
 ```bash
 mkdir ./ckpts && cd ./ckpts
-pip install gdown
-gdown https://drive.google.com/file/d/1K03JZt5tZWfoM4Jf1YL_MsZjQ_dmDnFg/view?usp=drive_link --fuzzy
-gdown https://drive.google.com/file/d/1oJOw6KcAXjlPft4zGxUcgkkFMiplUNe-/view?usp=drive_link --fuzzy
+pip install huggingface_hub
+python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='chenwang/geco', filename='model.safetensors', local_dir='.')"
+python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='chenwang/geco', filename='network-snapshot-005000.pkl', local_dir='.')"
+```
+
+Or with the `hf` CLI:
+```bash
+mkdir ./ckpts && cd ./ckpts
+hf download chenwang/geco model.safetensors network-snapshot-005000.pkl --local-dir .
 ```
 
 Then run:

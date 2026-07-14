@@ -1,5 +1,5 @@
 :root {
-    --bg: #f6f1e8;
+    --bg: #fdfaf4;
     --panel: #ffffff;
     --ink: #16202a;
     --muted: #5d6975;
@@ -32,7 +32,7 @@ a:hover {
     top: 0;
     z-index: 20;
     backdrop-filter: blur(14px);
-    background: rgba(246, 241, 232, 0.88);
+    background: rgba(253, 250, 244, 0.88);
     border-bottom: 1px solid var(--border);
 }
 
@@ -137,7 +137,7 @@ a:hover {
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 700;
-    box-shadow: 0 12px 30px rgba(22, 32, 42, 0.15);
+    box-shadow: 0 6px 16px rgba(22, 32, 42, 0.12);
 }
 
 .pill-button:hover {
@@ -158,7 +158,7 @@ a:hover {
 .bibtex-block {
     background: var(--panel);
     border: 1px solid var(--border);
-    box-shadow: 0 14px 40px rgba(22, 32, 42, 0.08);
+    box-shadow: 0 6px 18px rgba(22, 32, 42, 0.05);
 }
 
 .visual-frame {
